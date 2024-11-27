@@ -4,20 +4,23 @@ import { useCart } from 'react-use-cart';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-const TOKEN = '5929832704:AAH-RXP0_n5acEoTgDqHJjUWgdvN7ORkM2U';
-const CHAT = '-1002285114176';
+const TOKEN = '6860224388:AAH_jiGlu9A8kRh7aYaRDWqmLJbqttDKeTs';
+const CHAT = '-1002208287237';
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
+// Адаптивний стиль для модального вікна
 const modalStyle = {
   position: 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: { xs: '90%', sm: '80%', md: 400 }, // 90% ширини для мобільних, 80% для планшетів, фіксована ширина для десктопів
   bgcolor: 'background.paper',
   boxShadow: 24,
-  p: 4,
+  p: { xs: 2, sm: 4 }, // Зменшений відступ для мобільних
   borderRadius: '10px',
+  maxHeight: '90vh', // Обмеження висоти для мобільних пристроїв
+  overflowY: 'auto', // Прокрутка, якщо контент не вміщується
 };
 
 function OrderModal({ open, onClose }) {
