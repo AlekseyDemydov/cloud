@@ -4,8 +4,8 @@ import { useCart } from 'react-use-cart';
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-const TOKEN = '6860224388:AAH_jiGlu9A8kRh7aYaRDWqmLJbqttDKeTs';
-const CHAT = '-1002208287237';
+const TOKEN = '5929832704:AAH-RXP0_n5acEoTgDqHJjUWgdvN7ORkM2U';
+const CHAT = '-1002285114176';
 const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 // Адаптивний стиль для модального вікна

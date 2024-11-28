@@ -4,6 +4,7 @@ import ProductList from './pages/ProductList/ProductList';
 import Header from './pages/Header/Header';
 import Cart from './pages/Cart/Cart';
 import OrderModal from './pages/OrderModal/OrderModal';
+import s from './App.module.scss'
 
 function App() {
   const [isCartOpen, setCartOpen] = useState(false); 
@@ -23,6 +24,7 @@ function App() {
     <CartProvider>
     <Header onCartClick={toggleCart} />
       <main>
+        <h1 className={s.catalogTitle}>Каталог</h1>
         <ProductList />
       </main>
       <Cart open={isCartOpen} onClose={toggleCart} onOrderClick={toggleOrderModal} />

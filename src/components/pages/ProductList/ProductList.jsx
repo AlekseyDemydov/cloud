@@ -2,6 +2,7 @@ import React from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
 import { useCart } from 'react-use-cart';
 import img from './img/test.png';
+import Notiflix from 'notiflix';
 
 const products = [
   { id: 1, name: 'Товар 1', price: 100, image: img, description: 'это первый товар' },
@@ -45,13 +46,17 @@ function ProductList() {
               <Button
                 variant="contained"
                 color="primary"
-                onClick={() => addItem(product)}
+                onClick={() => {
+                  addItem(product); 
+                  Notiflix.Notify.success(`Замовлення ${product.name} додано до кошику`); 
+                }}
                 style={{ marginTop: '10px' }}
                 sx={{
-                  backgroundColor: '#ff5100', // Колір фону
-                  '&:hover': { backgroundColor: '#e64a00' }, // Колір при наведенні
-                  color: '#fff', // Колір тексту
+                  backgroundColor: '#ff5100', 
+                  '&:hover': { backgroundColor: '#e64a00' }, 
+                  color: '#fff', 
                 }}
+                
               >
                 Додати в кошик
               </Button>
