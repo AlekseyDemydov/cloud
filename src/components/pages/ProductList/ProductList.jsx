@@ -48,6 +48,9 @@ function ProductList() {
                 color="primary"
                 onClick={() => {
                   addItem(product); 
+                  Notiflix.Notify.init({
+                    position: 'right-bottom', // Позиція сповіщення: знизу праворуч
+                  });
                   Notiflix.Notify.success(`Замовлення ${product.name} додано до кошику`); 
                 }}
                 style={{ marginTop: '10px' }}
