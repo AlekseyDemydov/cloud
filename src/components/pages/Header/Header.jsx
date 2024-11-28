@@ -10,11 +10,15 @@ const modalStyle = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 400,
+  width: '90%', // Автоматична адаптація під мобільні пристрої
+  maxWidth: 400, // Максимальна ширина для великих екранів
   bgcolor: 'background.paper',
   boxShadow: 24,
-  p: 4,
+  p: 3,
   borderRadius: '10px',
+  '@media (max-width:600px)': {
+    p: 2, // Зменшені відступи на маленьких екранах
+  },
 };
 
 function Header({ onCartClick }) {
@@ -25,7 +29,7 @@ function Header({ onCartClick }) {
   const handleClose = () => setOpenModal(null);
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: 'black', paddingX: 5 }}>
+    <AppBar position="fixed" sx={{ backgroundColor: 'black', paddingX: { xs: 2, sm: 5 } }}>
       <Toolbar>
         {/* Логотип */}
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -89,5 +93,6 @@ function Header({ onCartClick }) {
     </AppBar>
   );
 }
+
 
 export default Header;
