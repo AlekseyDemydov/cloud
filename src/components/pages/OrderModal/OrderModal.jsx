@@ -3,10 +3,8 @@ import { Modal, Box, Typography, List, ListItem, ListItemText, Button, TextField
 import { useCart } from 'react-use-cart';
 import axios from 'axios';
 import Notiflix from 'notiflix';
+import {CHAT, URI_API } from './tg';
 
-const TOKEN = '5929832704:AAH-RXP0_n5acEoTgDqHJjUWgdvN7ORkM2U';
-const CHAT = '-1002285114176';
-const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 // Адаптивний стиль для модального вікна
 const modalStyle = {
