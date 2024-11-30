@@ -1,20 +1,28 @@
 import React from 'react';
 import { Grid, Card, CardMedia, CardContent, Typography, Button } from '@mui/material';
 import { useCart } from 'react-use-cart';
-import img from './img/test.png';
 import Notiflix from 'notiflix';
 
+import img1 from './img/photo_1_2024-11-30_13-26-41.jpg'
+import img2 from './img/photo_2_2024-11-30_13-26-41.jpg'
+import img3 from './img/photo_3_2024-11-30_13-26-41.jpg'
+import img4 from './img/photo_4_2024-11-30_13-26-41.jpg'
+import img5 from './img/photo_5_2024-11-30_13-26-41.jpg'
+import img6 from './img/photo_6_2024-11-30_13-26-41.jpg'
+import img7 from './img/photo_7_2024-11-30_13-26-41.jpg'
+import img8 from './img/photo_8_2024-11-30_13-26-41.jpg'
+import img9 from './img/photo_9_2024-11-30_13-26-41.jpg'
+
 const products = [
-  { id: 1, name: 'Товар 1', price: 100, image: img, description: 'это первый товар' },
-  { id: 2, name: 'Товар 2', price: 200, image: img, description: 'это второй товар' },
-  { id: 3, name: 'Товар 3', price: 300, image: img, description: 'это третий товар' },
-  { id: 4, name: 'Товар 1', price: 100, image: img, description: 'это первый товар' },
-  { id: 5, name: 'Товар 2', price: 200, image: img, description: 'это второй товар' },
-  { id: 6, name: 'Товар 1', price: 100, image: img, description: 'это первый товар' },
-  { id: 7, name: 'Товар 2', price: 200, image: img, description: 'это второй товар' },
-  { id: 8, name: 'Товар 3', price: 300, image: img, description: 'это третий товар' },
-  { id: 9, name: 'Товар 1', price: 100, image: img, description: 'это первый товар' },
-  { id: 10, name: 'Товар 2', price: 200, image: img, description: 'это второй товар' },
+  { id: 1, name: 'Спортивний костюм Lost Mary', price: 2700, image: img1, size: 'S, M L, XL' },
+  { id: 2, name: 'Футболка Elbar', price: 800, image: img2, size: 'S, M L, XL'  },
+  { id: 3, name: 'Світшот Lost Mary', price: 1700, image: img3, size: 'S, M L, XL'  },
+  { id: 4, name: 'Спортивний костюм VOZOL', price: 2200, image: img4, size: 'S, M L, XL'  },
+  { id: 5, name: 'Спортивний костюм Elfbar', price: 2200, image: img5, size: 'S, M L, XL'  },
+  { id: 6, name: 'Свій принт', price: 1500, image: img6, size: 'S, M L, XL'  },
+  { id: 7, name: 'Світшот свій принт', price: 1750, image: img7, size: 'S, M L, XL'  },
+  { id: 8, name: 'Світшот Elfbar', price: 1700, image: img8, size: 'S, M L, XL'  },
+  { id: 9, name: 'Світшот Elfbar', price: 1350, image: img9, size: 'S, M L, XL'  },
 ];
 
 function ProductList() {
@@ -34,11 +42,13 @@ function ProductList() {
               },
             }}
           >
-            <CardMedia component="img" height="140" image={product.image} alt={product.name} />
+            <CardMedia component="img" height="250" image={product.image} alt={product.name} />
             <CardContent>
-              <Typography variant="h5">{product.name}</Typography>
-              <Typography variant="body1" color="text">
-                Опис: {product.description}
+              <Typography variant="h7">{product.name}</Typography>
+              <br />
+              <br />
+              <Typography variant="h9" color="text">
+                Розмір: {product.size}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Ціна: {product.price} грн
